@@ -1,0 +1,360 @@
+/* Global */
+$color-main:#2e86de;
+$color-light: #fff;
+
+$font-text: 'Open Sans',
+sans-serif;
+$font-header: 'Alegreya Sans',
+sans-serif;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.row::before,
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    color: #3d3d3d;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-text;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 108px 0;
+}
+
+.section-title {
+    position: relative;
+    font-size: 36px;
+    margin: 0 0 60px 0;
+    font-family: $font-header;
+}
+
+.section-title::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    left: 50%;
+    width: 50px;
+    height: 10px;
+    transform: translateX(-50%);
+    background: $color-main;
+}
+
+/* Splash */
+.splash {
+    height: 100vh;
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.splash-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.splash i {
+    font-size: 30px;
+    background: $color-main;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: $color-light;
+    border-radius: 50%;
+}
+
+.page-title {
+    color: $color-light;
+    font-size: 48px;
+    margin: 48px 0 0 0;
+    position: relative;
+    font-family: $font-header;
+}
+
+.page-title::after {
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 100px;
+    height: 10px;
+    transform: translateX(-50%);
+    background: $color-main;
+}
+
+.page-subtitle {
+    color: $color-light;
+    font-size: 18px;
+    margin: 48px 0 0 0;
+}
+
+/* Intro */
+.intro {
+    background: $color-light;
+}
+
+.intro p {
+    width: 70%;
+    margin: 0 auto;
+    padding: 48px 0;
+    font-size: 30px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+/* About */
+.about {
+    background: #f0f0f0;
+}
+
+/* Skills */
+[class^="skill-"] {
+    position: relative;
+}
+
+.skill-image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    //selector .skill-image img:hover does not work without the following property:
+    z-index: 1;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.skill-right .skill-image {
+    right: 0;
+}
+
+.skill-right .skill-description {
+    padding: 36px 55% 36px 0;
+    text-align: right;
+}
+
+.skill-left .skill-description {
+    padding: 36px 0 36px 55%;
+    text-align: left;
+}
+
+article h3 {
+    text-transform: uppercase;
+}
+
+article p {
+    font-style: italic;
+}
+
+.skill-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Gallery */
+.project-first-row {
+    float: left;
+    width: 33.3333%;
+    height: 300px;
+}
+
+.project-second-row {
+    float: left;
+    width: 33.3333%;
+    height: 300px;
+}
+
+.portfolio.row {
+    margin-top: -15px;
+}
+
+.portfolio img {
+    // max-width: 100%;
+    // min-height: 100%;
+    // max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio div.box {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+body>section.portfolio.row>div:nth-child(2)>div {
+    background-image: url(https://media.giphy.com/media/W9lzJDwciz6bS/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body>section.portfolio.row>div:nth-child(3)>div {
+    background-image: url(https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body>section.portfolio.row>div:nth-child(4)>div {
+    background-image: url(https://media.giphy.com/media/ElbbhB6WU7vLq/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body>section.portfolio.row>div:nth-child(5)>div {
+    background-image: url(https://media.giphy.com/media/WsZOJfurNbbTG/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body>section.portfolio.row>div:nth-child(6)>div {
+    background-image: url(https://media.giphy.com/media/7NWhfa1lEHPqw/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body>section.portfolio.row>div:nth-child(7)>div {
+    background-image: url(https://media.giphy.com/media/IU3zXSyoe9fvG/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay h3 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-light;
+}
+
+.overlay button {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-main;
+    color: $color-light;
+    border: 1px solid $color-main;
+    padding: 15px 8px;
+    font-weight: bold;
+}
+
+.box:hover .overlay {
+    opacity: 0.7;
+}
+
+.single-btn {
+    background-color: $color-main;
+    color: $color-light;
+    border: 1px solid $color-main;
+    padding: 15px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Contact*/
+section.form {
+    background: #171717;
+    height: 85vh;
+    position: relative;
+}
+
+form {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.form h2 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;
+}
+
+input,
+textarea {
+    width: 30vw;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 2px 2px 10px rgba(27, 58, 1, 0.8);
+    background-color: inherit;
+    color: #fff;
+}
+
+input:valid,
+textarea:valid {
+    background-color: rgba(211, 230, 211, 0.1);
+    border: 1px solid #55ee70;
+}
+
+[type|=submit] {
+    background-color: $color-main;
+    color: $color-light;
+    border: none;
+    padding: 15px;
+    margin-top: 30px;
+    width: 100px;
+    text-transform: uppercase;
+    border: 1px solid $color-main;
+    font-weight: bold;
+}
+
+/*:hover effect for all buttons*/
+button:hover {
+    border: 1px solid $color-main;
+    background-color: $color-light;
+    color: $color-main;
+    transition: .6s;
+    font-weight: bold;
+}
+
+/* Footer*/
+footer {
+    position: relative;
+}
+
+footer .container {
+    position: absolute;
+    background-color: #242424;
+    min-width: 100%;
+    bottom: 0;
+}
