@@ -82,11 +82,15 @@ section {
 }
 
 .page-title {
-  color: #fff;
-  font-size: 48px;
+  font-size: 68px;
   margin: 48px 0 0 0;
   position: relative;
   font-family: "Alegreya Sans", sans-serif;
+  display: table;
+  margin: 0 auto;
+  background: repeating-radial-gradient(#c57f16, #1a9652 10%, #b626bb 15%, #18ec04 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .page-title::after {
@@ -360,5 +364,12 @@ footer .container {
   background-color: #242424;
   min-width: 100%;
   bottom: 0;
+}
+
+/* RWD*/
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  section.form {
+    height: 155vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */

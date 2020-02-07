@@ -87,11 +87,17 @@ section {
 }
 
 .page-title {
-    color: $color-light;
-    font-size: 48px;
+    // color: $color-light;
+    font-size: 68px;
     margin: 48px 0 0 0;
     position: relative;
     font-family: $font-header;
+    //Gridiant text
+    display: table;
+    margin: 0 auto;
+    background: repeating-radial-gradient(rgb(197, 127, 22), rgb(26, 150, 82) 10%, rgb(182, 38, 187) 15%, rgb(24, 236, 4) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .page-title::after {
@@ -357,4 +363,11 @@ footer .container {
     background-color: #242424;
     min-width: 100%;
     bottom: 0;
+}
+
+/* RWD*/
+@media screen and (max-width: 992px) and (orientation: landscape) {
+    section.form {
+        height: 155vh;
+    }
 }
