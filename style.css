@@ -69,6 +69,7 @@ section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .splash i {
@@ -271,11 +272,15 @@ body > section.portfolio.row > div:nth-child(7) > div {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #2e86de;
-  color: #fff;
-  border: 1px solid #2e86de;
   padding: 15px 8px;
-  font-weight: bold;
+  -webkit-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+          box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53f1dc, #5922f1);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .box:hover .overlay {
@@ -283,24 +288,29 @@ body > section.portfolio.row > div:nth-child(7) > div {
 }
 
 .single-btn {
-  background-color: #2e86de;
-  color: #fff;
-  border: 1px solid #2e86de;
   padding: 15px;
   margin-top: 30px;
   font-weight: bold;
+  -webkit-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+          box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53f1dc, #5922f1);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* Contact*/
 section.form {
   background: #171717;
-  height: 85vh;
+  height: 78vh;
   position: relative;
 }
 
 form {
   position: absolute;
-  top: 30%;
+  top: 28%;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
@@ -308,21 +318,20 @@ form {
 
 .form h2 {
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   margin-top: 40px;
+  color: #fff;
 }
 
 input,
 textarea {
-  width: 30vw;
-  padding: 5px;
-  margin: 5px;
-  -webkit-box-shadow: 2px 2px 10px rgba(27, 58, 1, 0.8);
-          box-shadow: 2px 2px 10px rgba(27, 58, 1, 0.8);
-  background-color: inherit;
+  width: 26vw;
+  padding: 9px;
+  margin: 6px;
+  background-color: #fff;
   color: #fff;
 }
 
@@ -333,30 +342,31 @@ textarea:valid {
 }
 
 [type|=submit] {
-  background-color: #2e86de;
-  color: #fff;
-  border: none;
   padding: 15px;
   margin-top: 30px;
   width: 100px;
   text-transform: uppercase;
-  border: 1px solid #2e86de;
   font-weight: bold;
+  -webkit-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+          box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53f1dc, #5922f1);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-/*:hover effect for all buttons*/
-button:hover {
-  border: 1px solid #2e86de;
-  background-color: #fff;
-  color: #2e86de;
-  -webkit-transition: .6s;
-  transition: .6s;
-  font-weight: bold;
+button.button:hover {
+  color: black;
+  -webkit-box-shadow: 2px 1000px 1px white inset;
+          box-shadow: 2px 1000px 1px white inset;
 }
 
 /* Footer*/
 footer {
   position: relative;
+  padding: 2px;
 }
 
 footer .container {
@@ -364,6 +374,8 @@ footer .container {
   background-color: #242424;
   min-width: 100%;
   bottom: 0;
+  color: #fff;
+  font-size: 12px;
 }
 
 /* RWD*/
@@ -371,5 +383,108 @@ footer .container {
   section.form {
     height: 155vh;
   }
+}
+
+/* Matrix header*/
+@font-face {
+  font-family: Katakana;
+  src: url("https://s.cdpn.io/26175/MoonBeams-katakana_.TTF");
+}
+
+.matrix {
+  margin: 0 auto;
+  font-family: Katakana;
+  max-width: 1460px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  background-image: -webkit-gradient(linear, 0% 90%, 0% 100%, from(rgba(0, 255, 0, 0)), to(rgba(0, 255, 0, 0.1)));
+  color: rgba(0, 255, 0, 0.7);
+  text-shadow: rgba(255, 255, 255, 0.8) 0px 0px 4px;
+  position: relative;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fall {
+  from {
+    top: -1500px;
+  }
+  to {
+    top: 100vh;
+  }
+}
+
+.matrix div {
+  position: absolute;
+  top: 0;
+  -webkit-transform-origin: 0%;
+  -webkit-transform: rotate(90deg);
+  -webkit-animation-name: fall, fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: ease-out;
+}
+
+.matrix span {
+  color: lime;
+  text-shadow: white 0px 0px 5px;
+  -webkit-animation-delay: 8s;
+}
+
+.f1 {
+  font-size: 1.2em;
+}
+
+.f2 {
+  font-size: .9em;
+}
+
+.c1 {
+  color: rgba(0, 255, 0, 0.5);
+}
+
+.d1 {
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: -1s;
+}
+
+.d2 {
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: -2s;
+}
+
+.d3 {
+  -webkit-animation-duration: 7s;
+  -webkit-animation-delay: -4s;
+}
+
+.d4 {
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: -3s;
+}
+
+.d5 {
+  -webkit-animation-duration: 7s;
+  -webkit-animation-delay: -5s;
+}
+
+.d6 {
+  -webkit-animation-duration: 5s;
+}
+
+.de {
+  -webkit-animation-delay: -3s;
 }
 /*# sourceMappingURL=style.css.map */
