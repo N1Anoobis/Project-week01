@@ -96,7 +96,7 @@ section {
     //Gridiant text
     display: table;
     margin: 0 auto;
-    background: repeating-radial-gradient(rgb(197, 127, 22), rgb(26, 150, 82) 10%, rgb(182, 38, 187) 15%, rgb(24, 236, 4) 20%);
+    background: repeating-linear-gradient(190deg, green, yellow 1%, green 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -276,12 +276,7 @@ body>section.portfolio.row>div:nth-child(7)>div {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 15px 8px;
-    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-    border: solid 3px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53f1dc, #5922f1);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow: none;
+    font-weight: bold;
 }
 
 .box:hover .overlay {
@@ -292,12 +287,6 @@ body>section.portfolio.row>div:nth-child(7)>div {
     padding: 15px;
     margin-top: 30px;
     font-weight: bold;
-    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-    border: solid 3px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53f1dc, #5922f1);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow: none;
 }
 
 /* Contact*/
@@ -323,6 +312,17 @@ form {
     color: $color-light;
 }
 
+div.special {
+    position: relative;
+}
+
+div.special i {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    color: #999;
+}
+
 input,
 textarea {
     width: 26vw;
@@ -344,17 +344,20 @@ textarea:valid {
     width: 100px;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+/* Button gradient*/
+button.button {
     box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
     border: solid 3px transparent;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53f1dc, #5922f1);
     background-origin: border-box;
     background-clip: content-box, border-box;
     box-shadow: none;
-
+    transition: .6s;
 }
 
 button.button:hover {
-
     color: black;
     box-shadow: 2px 1000px 1px rgb(255, 255, 255) inset;
 }

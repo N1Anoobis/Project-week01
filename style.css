@@ -89,7 +89,7 @@ section {
   font-family: "Alegreya Sans", sans-serif;
   display: table;
   margin: 0 auto;
-  background: repeating-radial-gradient(#c57f16, #1a9652 10%, #b626bb 15%, #18ec04 20%);
+  background: repeating-linear-gradient(190deg, green, yellow 1%, green 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -273,14 +273,7 @@ body > section.portfolio.row > div:nth-child(7) > div {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 15px 8px;
-  -webkit-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-          box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-  border: solid 3px transparent;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53f1dc, #5922f1);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  font-weight: bold;
 }
 
 .box:hover .overlay {
@@ -291,14 +284,6 @@ body > section.portfolio.row > div:nth-child(7) > div {
   padding: 15px;
   margin-top: 30px;
   font-weight: bold;
-  -webkit-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-          box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-  border: solid 3px transparent;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #53f1dc, #5922f1);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 /* Contact*/
@@ -326,6 +311,17 @@ form {
   color: #fff;
 }
 
+div.special {
+  position: relative;
+}
+
+div.special i {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  color: #999;
+}
+
 input,
 textarea {
   width: 26vw;
@@ -347,6 +343,10 @@ textarea:valid {
   width: 100px;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+/* Button gradient*/
+button.button {
   -webkit-box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
           box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
   border: solid 3px transparent;
@@ -355,6 +355,8 @@ textarea:valid {
   background-clip: content-box, border-box;
   -webkit-box-shadow: none;
           box-shadow: none;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 button.button:hover {
