@@ -1,2 +1,1 @@
-# Project-week01
-Simple Page Made in scss and some special effects
+https://n1anoobis.github.io/Project-week01/
